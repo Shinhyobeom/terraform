@@ -1,4 +1,3 @@
-# 가용 영역 a의 public subnet
 resource "aws_subnet" "hb_puba" {
   vpc_id            = aws_vpc.hb_vpc.id
   cidr_block        = "10.0.0.0/24"
