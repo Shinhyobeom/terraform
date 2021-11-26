@@ -8,3 +8,7 @@ resource "aws_lb" "hb_alb" {
     "Name" = "hb-alb"
   }
 }
+
+output "dns_name" {
+  value = aws_lb.hb_alb.dns_name
+}
