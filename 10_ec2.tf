@@ -22,6 +22,7 @@ resource "aws_instance" "hb_web" {
   availability_zone      = "ap-northeast-2a"
   private_ip             = "10.0.0.11"
   subnet_id              = aws_subnet.hb_puba.id
+  user_data              = file("./install.sh")
 
   tags = {
     "Name" = "hb-web"
@@ -36,5 +37,5 @@ resource "aws_eip" "hb_web_ip" {
 }
 
 output "public_ip" {
-    value = aws_instance.hb_web.public_ip
+  value = aws_instance.hb_web.public_ip
 }
