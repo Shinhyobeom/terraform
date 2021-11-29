@@ -10,7 +10,7 @@ resource "aws_launch_configuration" "hb_lacf" {
   name                 = "${var.name}-lacf"
   image_id             = aws_ami_from_instance.hb_ami.id
   instance_type        = var.ins_t2m
-  iam_instance_profile = "admin_role" #IAM 역할 만든거
+  iam_instance_profile = var.role #IAM 역할 만든거
   security_groups      = [aws_security_group.hb_sg.id]
   key_name             = var.key
   user_data            = <<-EOF
