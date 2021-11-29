@@ -5,10 +5,10 @@ resource "aws_db_instance" "hb_mydb" {
   engine                 = var.mysql
   engine_version         = "8.0"
   instance_class         = "db.${var.ins_t2m}"
-  name                   = "hb"
-  identifier             = "hb"
-  username               = "admin"
-  password               = "1q2w3e4r"
+  name                   = var.db_name
+  identifier             = var.db_name
+  username               = var.db_user
+  password               = var.db_password
   parameter_group_name   = "default.mysql8.0"
   availability_zone      = "${var.region}${var.ava_zone[0]}"
   db_subnet_group_name   = aws_db_subnet_group.hb_dbsg.id
