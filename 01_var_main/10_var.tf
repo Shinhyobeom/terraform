@@ -87,7 +87,6 @@ variable "port_zero" {
   type    = number
   default = 0
 }
-
 variable "minus" {
   default = -1
 }
@@ -129,4 +128,19 @@ variable "pri_ip" {
 variable "lb_api" {
   type = string
   default = "application"
+}
+
+variable "db_name" {
+  type = string
+  default = "hb"
+}
+
+variable "db_user" {
+  type = string
+  default = "admin"
+}
+
+variable "db_password" {
+  type = string
+  default = "1q2w3e4r"
 }
