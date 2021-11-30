@@ -14,6 +14,7 @@ sed -i 's/database_name_here/hb/g' /var/www/html/wp-config.php
 sed -i 's/username_here/admin/g' /var/www/html/wp-config.php
 sed -i 's/password_here/1q2w3e4r/g' /var/www/html/wp-config.php
 sed -i 's/localhost/hb.cdiyyxwcdqwv.ap-northeast-2.rds.amazonaws.com/g' /var/www/html/wp-config.php
+#sed -i 's/localhost/hb.cafmcruikdgj.ap-northeast-1.rds.amazonaws.com/g' /var/www/html/wp-config.php
 cat > /var/www/html/health.html << EOF
 <html><body><h1>HB WEB SERVER_health </h1></body></html>
 EOF
